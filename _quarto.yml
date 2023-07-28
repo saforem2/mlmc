@@ -3,8 +3,8 @@ project:
   output-dir: docs
   preview:
     port: 4201
-website:
-  page-navigation: true
-  title: "MLMC: Machine Learning Monte Carlo"
-  site-url: "https://saforem2.github.io/mlmc"
-  favicon: "./assets/favicon.svg"
+# website:
+#   page-navigation: true
+#   title: "MLMC: Machine Learning Monte Carlo"
+#   # site-url: "https://saforem2.github.io/mlmc"
+#   # favicon: "./assets/favicon.svg"
