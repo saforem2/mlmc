@@ -12,10 +12,7 @@ format:
     auto-animate: true
     reference-location: section
     touch: true
-    # loop: true
     pause: false
-    # classoption: fleqn
-    # fig-responsive: true
     footnotes-hover: true
     citations-hover: true
     preview-links: true
@@ -23,13 +20,15 @@ format:
     controls: false
     logo: "https://raw.githubusercontent.com/saforem2/anl-job-talk/main/docs/assets/anl.svg"
     history: false
-    # margin: 0.15
     theme: [dark, css/dark.scss]
-    # theme: [css/common.scss, css/common.scss, css/dark.scss]
-      # - light: [light, custom.scss]
     css: [css/default.css, css/callouts.css, css/code-callout.css]
     menu:
       width: "half"
+    # margin: 0.15
+    # classoption: fleqn
+    # fig-responsive: true
+    # theme: [css/common.scss, css/common.scss, css/dark.scss]
+      # - light: [light, custom.scss]
     # menu:
     #   side: right
     #   width: wide
