@@ -7,8 +7,8 @@ format:
     title-block-style: none
     slide-number: c/t
     title-slide-style: pandoc
-    chalkboard:
-      buttons: false
+    # chalkboard:
+    #   buttons: false
     auto-animate: true
     reference-location: section
     touch: true
@@ -26,6 +26,7 @@ format:
     embed-resources: false
     self-contained-math: false
     center: true
+    highlight-style: "atom-one"
     default-image-extension: svg
     code-line-numbers: true
     code-overflow: scroll
