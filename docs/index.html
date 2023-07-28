@@ -922,6 +922,18 @@ A({\textcolor{#f8f8f8}{\xi'}}|{\textcolor{#939393}{\xi}})=
 <aside><ol class="aside-footnotes"><li id="fn7"><p>For simple <span class="math inline">\mathbf{x} \in \mathbb{R}^{2}</span> example, <span class="math inline">\mathcal{L}_{\theta} = A(\xi^{\ast}|\xi)\cdot \left(\mathbf{x}^{\ast} - \mathbf{x}\right)^{2}</span></p></li></ol></aside></section>
 
 
+<section id="l2hmc-leapfrog-layer" class="title-slide slide level1 centeredslide center">
+<h1>L2HMC: Leapfrog Layer</h1>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><img data-src="https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/update_steps.svg" class="absolute" style="top: 30px; width: 40%; "></p>
+</div><div class="column" style="width:65%;">
+<p><img data-src="https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/leapfrog_layer_dark2.svg" style="width:100.0%"></p>
+</div>
+</div>
+<p><img data-src="https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/network_functions.svg" class="absolute" style="top: 440px; width: 100%; "></p>
+</section>
+
 <section id="d-su3-model-1" class="title-slide slide level1 centeredslide center">
 <h1>4D <span class="math inline">SU(3)</span> Model</h1>
 <div class="columns">
@@ -1022,18 +1034,6 @@ q_{P} = \lambda_{q}\tanh\left(w_{q} h_{n} + b_{q}\right)</span></p></li>
 <aside><ol class="aside-footnotes"><li id="fn10"><p><span class="math inline">\lambda_{s},\, \lambda_{q} \in \mathbb{R}</span> are trainable parameters</p></li><li id="fn11"><p>Note that <span class="math inline">\left(\Gamma^{+}\right)^{-1} = \Gamma^{-}</span>, i.e.&nbsp;<span class="math inline">\Gamma^{+}\left[\Gamma^{-}(U, P)\right] = \Gamma^{-}\left[\Gamma^{+}(U, P)\right] = (U, P)</span></p></li></ol></aside></section>
 
 
-<section id="l2hmc-leapfrog-layer" class="title-slide slide level1 centeredslide center">
-<h1>L2HMC: Leapfrog Layer</h1>
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><img data-src="https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/update_steps.svg" class="absolute" style="top: 30px; width: 40%; "></p>
-</div><div class="column" style="width:65%;">
-<p><img data-src="https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/leapfrog_layer_dark2.svg" style="width:100.0%"></p>
-</div>
-</div>
-<p><img data-src="https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/network_functions.svg" class="absolute" style="top: 440px; width: 100%; "></p>
-</section>
-
 <section id="loss-function" class="title-slide slide level1 center">
 <h1>Loss Function</h1>
 <ul>
@@ -1057,8 +1057,13 @@ A(\xi^{\ast}|\xi) = \mathrm{min}\left( 1,
 <aside><ol class="aside-footnotes"><li id="fn12"><p>Where <span class="math inline">\xi^{\ast}</span> is the <em>proposed</em> configuration (prior to Accept / Reject)</p></li><li id="fn13"><p>And <span class="math inline">\left|\frac{\partial \xi^{\ast}}{\partial \xi^{T}}\right|</span> is the Jacobian of the transformation from <span class="math inline">\xi \rightarrow \xi^{\ast}</span></p></li></ol></aside></section>
 
 
-<section id="integrated-autocorrelation-time-tau_mathrmint" class="title-slide slide level1 centeredslide center">
-<h1>Integrated Autocorrelation time: <span class="math inline">\tau_{\mathrm{int}}</span></h1>
+<section>
+<section id="d-u1-results" class="title-slide slide level1 center">
+<h1>2D <span class="math inline">U(1)</span> Results</h1>
+
+</section>
+<section id="integrated-autocorrelation-time-tau_mathrmint" class="slide level2 centeredslide center">
+<h2>Integrated Autocorrelation time: <span class="math inline">\tau_{\mathrm{int}}</span></h2>
 <div class="columns">
 <div class="column" style="align:top;">
 <p><img data-src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/autocorr_new.svg" style="width:90.0%"></p>
@@ -1081,14 +1086,12 @@ A(\xi^{\ast}|\xi) = \mathrm{min}\left( 1,
 </div>
 <p><img data-src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/charge_histories.svg" class="absolute" style="margin-bottom: 1em;margin-top: 1em;top: 400px; left: 0px; width: 100%; "></p>
 </section>
-
-<section id="integrated-autocorrelation-time" class="title-slide slide level1 centeredslide center">
-<h1>Integrated Autocorrelation Time</h1>
+<section id="integrated-autocorrelation-time" class="slide level2 centeredslide center">
+<h2>Integrated Autocorrelation Time</h2>
 
 <img data-src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/tint1.svg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;7: Plot of the integrated autocorrelation time for both the trained model (colored) and HMC (greyscale).</p></section>
-
-<section id="interpretation" class="title-slide slide level1 centeredslide center">
-<h1>Interpretation</h1>
+<section id="interpretation" class="slide level2 centeredslide center">
+<h2>Interpretation</h2>
 <div class="columns" style="margin-left:1pt;">
 <div class="column" style="width:36%;">
 <p><span class="dim-text" style="text-align:center; font-size:0.8em">Deviation in <span class="math inline">x_{P}</span></span></p>
@@ -1100,9 +1103,8 @@ A(\xi^{\ast}|\xi) = \mathrm{min}\left( 1,
 </div>
 
 <img data-src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/ridgeplots.svg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;8: Illustration of how different observables evolve over a single L2HMC trajectory.</p></section>
-
-<section id="interpretation-1" class="title-slide slide level1 centeredslide center">
-<h1>Interpretation</h1>
+<section id="interpretation-1" class="slide level2 centeredslide center">
+<h2>Interpretation</h2>
 <div id="fig-energy-ridgeplot" class="quarto-layout-panel">
 <figure>
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -1127,9 +1129,8 @@ A(\xi^{\ast}|\xi) = \mathrm{min}\left( 1,
 </figure>
 </div>
 </section>
-
-<section id="plaquette-analysis-x_p" class="title-slide slide level1 centeredslide center">
-<h1>Plaquette analysis: <span class="math inline">x_{P}</span></h1>
+<section id="plaquette-analysis-x_p" class="slide level2 centeredslide center">
+<h2>Plaquette analysis: <span class="math inline">x_{P}</span></h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><span class="dim-text" style="text-align:center; font-size:0.9em;">Deviation from <span class="math inline">V\rightarrow\infty</span> limit, <span class="math inline">x_{P}^{\ast}</span></span></p>
@@ -1139,9 +1140,8 @@ A(\xi^{\ast}|\xi) = \mathrm{min}\left( 1,
 </div>
 
 <img data-src="https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/plaqsf_vs_lf_step1.svg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;10: Plot showing how <strong>average plaquette</strong>, <span class="math inline">\left\langle x_{P}\right\rangle</span> varies over a single trajectory for models trained at different <span class="math inline">\beta</span>, with varying trajectory lengths <span class="math inline">N_{\mathrm{LF}}</span></p></section>
-
-<section id="comparison" class="title-slide slide level1 center">
-<h1>Comparison</h1>
+<section id="comparison" class="slide level2 center">
+<h2>Comparison</h2>
 <div id="fig-comparison" class="quarto-layout-panel">
 <figure>
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -1165,8 +1165,7 @@ A(\xi^{\ast}|\xi) = \mathrm{min}\left( 1,
 <p></p><figcaption>Figure&nbsp;11: Comparison of <span class="math inline">\langle \delta Q\rangle = \frac{1}{N}\sum_{i=k}^{N} \delta Q_{i}</span> for the trained model <a href="#/comparison">Figure&nbsp;11 (a)</a> vs.&nbsp;HMC <a href="#/comparison">Figure&nbsp;11 (b)</a></figcaption><p></p>
 </figure>
 </div>
-</section>
-
+</section></section>
 <section>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank you!</h1>

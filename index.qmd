@@ -568,6 +568,22 @@ $$\textcolor{#939393} \xi \hspace{1pt}\xrightarrow[]{\tiny{\mathrm{LF} \text{ la
     A(\xi^{\ast}|\xi)\cdot \left(\mathbf{x}^{\ast} - \mathbf{x}\right)^{2}$
 
 
+# L2HMC: Leapfrog Layer {.centeredslide}
+
+:::: {.columns}
+
+::: {.column width="35%"}
+![](https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/update_steps.svg){.absolute  top="30" width="40%"}
+:::
+
+::: {.column width="65%"}
+![](https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/leapfrog_layer_dark2.svg){width="100%"}
+:::
+::::
+
+![](https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/network_functions.svg){.absolute top=440 width="100%"}
+
+
 # 4D $SU(3)$ Model {.centeredslide}
 
 :::: {.columns}
@@ -668,22 +684,6 @@ $$\textcolor{#939393} \xi \hspace{1pt}\xrightarrow[]{\tiny{\mathrm{LF} \text{ la
 [^inverse]: Note that $\left(\Gamma^{+}\right)^{-1} = \Gamma^{-}$, i.e. $\Gamma^{+}\left[\Gamma^{-}(U, P)\right] = \Gamma^{-}\left[\Gamma^{+}(U, P)\right] = (U, P)$
 
 
-# L2HMC: Leapfrog Layer {.centeredslide}
-
-:::: {.columns}
-
-::: {.column width="35%"}
-![](https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/update_steps.svg){.absolute  top="30" width="40%"}
-:::
-
-::: {.column width="65%"}
-![](https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/leapfrog_layer_dark2.svg){width="100%"}
-:::
-::::
-
-![](https://raw.githubusercontent.com/saforem2/l2hmc-dwq25/main/docs/assets/drawio/network_functions.svg){.absolute top=440 width="100%"}
-
-
 # Loss Function
 
 - Want to maximize the _expected_ squared charge difference[^charge-diff]:
@@ -711,7 +711,9 @@ Accept / Reject)
 [^jacobian]: And $\left|\frac{\partial \xi^{\ast}}{\partial \xi^{T}}\right|$ is the
 Jacobian of the transformation from $\xi \rightarrow \xi^{\ast}$
 
-# Integrated Autocorrelation time: $\tau_{\mathrm{int}}$ {.centeredslide}
+# 2D $U(1)$ Results
+
+## Integrated Autocorrelation time: $\tau_{\mathrm{int}}$ {.centeredslide}
 
 :::: {.columns}
 
@@ -736,7 +738,7 @@ We can measure the performance by comparing $\tau_{\mathrm{int}}$ for the
 ![](https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/charge_histories.svg){.absolute top=400 left=0 width="100%" style="margin-bottom: 1em;margin-top: 1em;"}
 
 
-# Integrated Autocorrelation Time {.centeredslide}
+## Integrated Autocorrelation Time {.centeredslide}
 
 ::: {#fig-iat}
 ![](https://raw.githubusercontent.com/saforem2/physicsSeminar/main/assets/tint1.svg){width="100%"}
@@ -745,7 +747,7 @@ Plot of the integrated autocorrelation time for both the trained model
 (colored) and HMC (greyscale).
 :::
 
-# Interpretation {.centeredslide}
+## Interpretation {.centeredslide}
 
 :::: {.columns style="margin-left:1pt;"}
 
@@ -778,7 +780,7 @@ trajectory.
 :::
 
 
-# Interpretation {.centeredslide}
+## Interpretation {.centeredslide}
 
 ::: {#fig-energy-ridgeplot layout-ncol=2 layout-valign="top"}
 
@@ -791,7 +793,7 @@ the middle of the trajectory, allowing the sampler to tunnel between isolated
 sectors.
 :::
 
-# Plaquette analysis: $x_{P}$ {.centeredslide}
+## Plaquette analysis: $x_{P}$ {.centeredslide}
 
 :::: {.columns}
 
@@ -816,7 +818,7 @@ varies over a single trajectory for models trained at different $\beta$, with
 varying trajectory lengths $N_{\mathrm{LF}}$
 :::
 
-# Comparison
+## Comparison
 
 ::: {#fig-comparison layout-ncol=2}
 
