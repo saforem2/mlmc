@@ -22,7 +22,7 @@ format:
     history: false
     theme: [dark, css/dark.scss]
     css: [css/default.css, css/callouts.css, css/code-callout.css]
-    self-contained: false
+    self-contained: true
     embed-resources: false
     self-contained-math: false
     center: true
@@ -375,6 +375,8 @@ P(\textcolor{#FFEE58}{\varepsilon}) &= P(0) - \textcolor{#FFEE58}{\varepsilon} \
 :::: {.columns}
 
 ::: {.column width="47%" style="text-align:left;"}
+
+Again, we can express the updates in terms of the operators
 
 - [Momentum Update]{style="border-bottom: 2px solid #F06292;"}:
   $$\textcolor{#F06292}{\Gamma}: P \longrightarrow P' := P - \frac{\varepsilon}{2} F[U]$$
@@ -1010,6 +1012,5 @@ Jupyter Notebook
 Increasing the physical resolution ($a \rightarrow 0$) allows us to make
 predictions about numerical values of physical quantities in the continuum
 limit.
+
 :::
-
-
