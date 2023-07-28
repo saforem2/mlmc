@@ -7,8 +7,8 @@ format:
     title-block-style: none
     slide-number: c/t
     title-slide-style: pandoc
-    chalkboard:
-      buttons: false
+    # chalkboard:
+    #   buttons: false
     auto-animate: true
     reference-location: section
     touch: true
@@ -24,14 +24,6 @@ format:
     css: [css/default.css, css/callouts.css, css/code-callout.css]
     menu:
       width: "half"
-    # margin: 0.15
-    # classoption: fleqn
-    # fig-responsive: true
-    # theme: [css/common.scss, css/common.scss, css/dark.scss]
-      # - light: [light, custom.scss]
-    # menu:
-    #   side: right
-    #   width: wide
     self-contained: false
     embed-resources: false
     self-contained-math: false
