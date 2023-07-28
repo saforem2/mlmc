@@ -22,24 +22,17 @@ format:
     history: false
     theme: [dark, css/dark.scss]
     css: [css/default.css, css/callouts.css, css/code-callout.css]
-    menu:
-      width: "half"
     self-contained: false
     embed-resources: false
     self-contained-math: false
     center: true
-    highlight-style: "atom-one"
     default-image-extension: svg
     code-line-numbers: true
     code-overflow: scroll
     html-math-method: katex
     fig-align: center
-    execute:
-      freeze: auto
     mermaid:
       theme: dark
-resources:
-  - slides.pdf
 ---
 
 # {.title-slide .centeredslide background-iframe="https://saforem2.github.io/grid-worms-animation/" loading="lazy"}
