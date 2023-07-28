@@ -1,4 +1,5 @@
 # User added
+/.quarto/
 venvs/*
 *.DS_Store
 
