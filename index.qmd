@@ -22,7 +22,7 @@ format:
     history: false
     theme: [dark, css/dark.scss]
     css: [css/default.css, css/callouts.css, css/code-callout.css]
-    self-contained: true
+    self-contained: false
     embed-resources: false
     self-contained-math: false
     center: true
